@@ -127,7 +127,7 @@ private fun portraitConstraint(margin: Int, scrHeight: Dp, scrWidth: Dp): Constr
         val billsMarginStart = (scrWidth/20)
         val numpadMarginTop = (scrHeight/8) * 3
         val numpadMarginStart = (scrWidth/7)*3
-        val typedMarginTop = (scrHeight/5)*3
+        val typedMarginTop = (scrHeight/5)
 
 
         constrain(billsRef){
