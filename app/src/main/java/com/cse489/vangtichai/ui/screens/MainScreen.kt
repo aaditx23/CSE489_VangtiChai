@@ -121,25 +121,23 @@ private fun portraitConstraint(margin: Int, scrHeight: Dp, scrWidth: Dp): Constr
         val billsRef = createRefFor("notesBox")
         val typedRef = createRefFor("typedText")
 
-        val guideline = createGuidelineFromTop(0.6f)
-        val guidelineHorizontal = createGuidelineFromAbsoluteLeft(0.5f)
 
         // margin values
-        val billsMarginTop = -(scrHeight/6)
+        val billsMarginTop = (scrHeight/4)
         val billsMarginStart = (scrWidth/20)
-        val numpadMarginTop = -(scrHeight/8)
+        val numpadMarginTop = (scrHeight/8) * 3
         val numpadMarginStart = (scrWidth/7)*3
-        val typedMarginTop = scrHeight/5
+        val typedMarginTop = (scrHeight/5)*3
 
 
         constrain(billsRef){
-            top.linkTo(guideline, margin = billsMarginTop)
+            top.linkTo(parent.top, margin = billsMarginTop)
             start.linkTo(parent.start, margin = billsMarginStart)
         }
 
 
         constrain(numpadRef){
-            top.linkTo(guideline, margin = numpadMarginTop)
+            top.linkTo(parent.top, margin = numpadMarginTop)
             start.linkTo(parent.start, margin = numpadMarginStart)
         }
 
@@ -159,25 +157,23 @@ private fun landscapeConstraint(margin: Int, scrHeight: Dp, scrWidth: Dp): Const
         val billsRef = createRefFor("notesBox")
         val typedRef = createRefFor("typedText")
 
-        val guideline = createGuidelineFromTop(0.7f)
-        val guidelineHorizontal = createGuidelineFromAbsoluteLeft(0.5f)
 
         // margin values
-        val billsMarginTop = -(scrHeight/6)
+        val billsMarginTop = (scrHeight/8)*3
         val billsMarginStart = (scrWidth/20)
-        val numpadMarginTop = -(scrHeight/8)
+        val numpadMarginTop = (scrHeight/8)*3
         val numpadMarginStart = (scrWidth/2)
-        val typedMarginTop = scrHeight/5
+        val typedMarginTop = (scrHeight/4)
 
 
         constrain(billsRef){
-            top.linkTo(guideline, margin = billsMarginTop)
+            top.linkTo(parent.top, margin = billsMarginTop)
             start.linkTo(parent.start, margin = billsMarginStart)
         }
 
 
         constrain(numpadRef){
-            top.linkTo(guideline, margin = numpadMarginTop)
+            top.linkTo(parent.top, margin = numpadMarginTop)
             start.linkTo(parent.start, margin = numpadMarginStart)
         }
 
